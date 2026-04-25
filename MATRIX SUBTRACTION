@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main() {
+    int r, c, i, j;
+    int first[10][10], second[10][10], difference[10][10];
+
+    printf("Enter the number of rows and columns: ");
+    scanf("%d%d", &r, &c);
+
+    // Input elements for first matrix
+    printf("Enter elements of first matrix:\n");
+    for (i = 0; i < r; ++i)
+        for (j = 0; j < c; ++j)
+            scanf("%d", &first[i][j]);
+
+    // Input elements for second matrix
+    printf("Enter elements of second matrix:\n");
+    for (i = 0; i < r; ++i)
+        for (j = 0; j < c; ++j)
+            scanf("%d", &second[i][j]);
+
+    // Subtraction logic
+    for (i = 0; i < r; ++i)
+        for (j = 0; j < c; ++j)
+            difference[i][j] = first[i][j] - second[i][j];
+
+    // Output the result
+    printf("\nResultant Matrix (Difference):\n");
+    for (i = 0; i < r; ++i) {
+        for (j = 0; j < c; ++j) {
+            printf("%d\t", difference[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+OUTPUT:
+Enter the number of rows and columns: 2 2
+Enter elements of first matrix:
+5 8
+3 4
+Enter elements of second matrix:
+1 2
+1 1
+
+Resultant Matrix (Difference):
+4	6	
+2	3	
