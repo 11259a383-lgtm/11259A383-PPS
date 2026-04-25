@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int num1 = 12;
+    int num2 = 5;
+    
+    // Variables to store results
+    int sum, diff, prod, rem;
+    float quot;
+
+    // Performing arithmetic operations
+    sum  = num1 + num2; // Addition
+    diff = num1 - num2; // Subtraction
+    prod = num1 * num2; // Multiplication
+    rem  = num1 % num2; // Modulus (Returns the remainder)
+    
+    // Typecasting to float to get accurate decimal values
+    quot = (float)num1 / num2; 
+
+    // Displaying the outputs
+    printf("Number 1: %d\n", num1);
+    printf("Number 2: %d\n\n", num2);
+    
+    printf("🎯 Addition (+): %d\n", sum);
+    printf("🎯 Subtraction (-): %d\n", diff);
+    printf("🎯 Multiplication (*): %d\n", prod);
+    printf("🎯 Division (/): %.2f\n", quot);
+    printf("🎯 Modulus (%%): %d\n", rem);
+
+    return 0;
+}
+
+
+OUTPUT:
+Number 1: 12
+Number 2: 5
+
+🎯 Addition (+): 17
+🎯 Subtraction (-): 7
+🎯 Multiplication (*): 60
+🎯 Division (/): 2.40
+🎯 Modulus (%): 2
