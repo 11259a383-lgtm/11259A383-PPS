@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int r, c, i, j;
+    int a[10][10], b[10][10], sum[10][10];
+
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+
+    // Input matrices and calculate sum
+    for(i=0; i<r; i++)
+        for(j=0; j<c; j++) {
+            printf("Element a[%d][%d] and b[%d][%d]: ", i, j, i, j);
+            scanf("%d %d", &a[i][j], &b[i][j]);
+            sum[i][j] = a[i][j] + b[i][j];
+        }
+
+    // Display result
+    printf("Resultant Matrix:\n");
+    for(i=0; i<r; i++) {
+        for(j=0; j<c; j++)
+            printf("%d ", sum[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+
+OUTPUT:
+Enter rows and cols: 2 2
+Element a[0][0] and b[0][0]: 1 5
+Element a[0][1] and b[0][1]: 2 6
+Element a[1][0] and b[1][0]: 3 7
+Element a[1][1] and b[1][1]: 4 8
+Resultant Matrix:
+6 8 
+10 12 
