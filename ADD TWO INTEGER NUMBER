@@ -1,0 +1,26 @@
+#include <stdio.h> // Standard input-output library
+
+int main() {
+    int num1, num2, sum;
+
+    // Ask user for input
+    printf("Enter two integers: ");
+    
+    // Read user input and store in variables num1 and num2
+    // %d is the format specifier for integers
+    scanf("%d %d", &num1, &num2);
+
+    // Calculate sum using the + operator
+    sum = num1 + num2;
+
+    // Display the result
+    printf("The sum of %d and %d is %d\n", num1, num2, sum);
+
+    return 0; // Indicates successful execution
+}
+
+
+OUTPUT:
+Enter the first integer: 10
+Enter the second integer: 25
+The sum of 10 and 25 is: 35
