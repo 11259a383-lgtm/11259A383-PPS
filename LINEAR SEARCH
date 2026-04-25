@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int array[100], search, c, n;
+
+    printf("Enter number of elements in array: ");
+    scanf("%d", &n);
+
+    printf("Enter %d integer(s):\n", n);
+    for (c = 0; c < n; c++) {
+        scanf("%d", &array[c]);
+    }
+
+    printf("Enter a number to search for: ");
+    scanf("%d", &search);
+
+    // Linear Search Logic
+    for (c = 0; c < n; c++) {
+        if (array[c] == search) { // Compare current element with target
+            printf("%d is present at location %d.\n", search, c + 1);
+            break; // Stop searching once found
+        }
+    }
+
+    if (c == n) { // If loop reaches end without finding the element
+        printf("%d is not present in the array.\n", search);
+    }
+
+    return 0;
+}
+OUTPUT:
+Enter number of elements in array: 5
+Enter 5 integer(s):
+10 20 30 40 50
+Enter a number to search for: 30
+30 is present at location 3.
